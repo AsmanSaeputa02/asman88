@@ -1,0 +1,37 @@
+{% extends 'base.html' %} {% block title %}
+<title>แบบฟอร์ม</title>
+{% endblock title %} {% block content %}
+
+
+<div class="container mt-5">
+    <h2>กรอกแบบฟอรมของคุณ</h2>
+    <form>
+
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+        </div>
+
+        <!-- Form Group 2: Email -->
+        <div class="form-group">
+            <label for="email">Email address:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+        </div>
+
+        <!-- Form Group 3: Message -->
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+
+
+
+
+
+{% endblock content %}
