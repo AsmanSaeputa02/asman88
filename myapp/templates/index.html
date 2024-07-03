@@ -1,31 +1,28 @@
-{% extends 'base.html' %} {% block title %}
-<title>
-    <h1>หน้าแรก</h1>
-</title>
-{% endblock title %} {% block content %}
+{% extends 'base.html' %}
+
+{% block title %}
+<title>หน้าแรก</title>
+{% endblock title %}
+
+{% block content %}
 <div style="background-color: #f5f5f5; padding: 20px; border-radius: 10px;">
     <h1 style="color: #333; text-align: center;">จำนวนประชากร</h1>
 
     <table class="table" style="background-color: #fff; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
-        <thead style="background-color: darkthone; color: #fff;">
+        <thead style="background-color: #333; color: #fff;">
             <tr>
-                <th scope="ชื่อ">ชื่อ</th>
-                <th scope="อายุ">อายุ</th>
+                <th scope="col">ชื่อ</th>
+                <th scope="col">อายุ</th>
             </tr>
         </thead>
         <tbody>
-            {% for person in all__person %}
+            {% for person in people %}
             <tr>
-                <th scope="row" style="background-color: #f2f2f2;">{{person.id}}</th>
-                <td style="color: #333;">{{person.name}}</td>
-                <td style="color: #333;">{{person.age}}</td>
+                <td style="color: #333;">{{ person.name }}</td>
+                <td style="color: #333;">{{ person.age }}</td>
             </tr>
-            <h1>ควย</h1>
             {% endfor %}
         </tbody>
     </table>
-</div>
-
-
 </div>
 {% endblock content %}
